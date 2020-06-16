@@ -1,9 +1,5 @@
-name: intro_r
-
 channels:
   - conda-forge
-  - bioconda
-  - defaults
 
 dependencies:
   - r-base=3.6
