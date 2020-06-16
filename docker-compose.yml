@@ -11,7 +11,8 @@ services:
 
     volumes:
       -  /etc/localtime:/etc/localtime:ro
-      - ./work:/home/rstudio/work
+      - ./work:/home/rstudio/documents
 
     environment:
       - DISABLE_AUTH=true
+
