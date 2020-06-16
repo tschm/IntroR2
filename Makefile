@@ -1,5 +1,6 @@
 #!make
 SHELL := /bin/bash
+PROJECT_VERSION := 0.0.1
 
 .PHONY: help tag
 
@@ -13,7 +14,7 @@ build:
 	docker-compose build rstudio
 
 rstudio:
-	echo "http://localhost:8888"
+	echo "http://localhost:8787"
 	docker-compose up rstudio
 
 tag: test
