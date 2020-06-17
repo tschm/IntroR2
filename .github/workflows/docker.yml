@@ -15,9 +15,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      #- name: Build Docker Image
-      #  run: make build
-
       - name: Dockerhub
         uses: binder/build-push-action@v1
         with:
