@@ -43,21 +43,13 @@ RUN python3 -m venv ${VENV_DIR} && \
     pip3 install pip==9.0.1 && \
     pip3 install --no-cache-dir jupyter-rsession-proxy
 
-#RUN chown -R ${NB_USER}:${NB_USER} /home/rstudio/documents
 RUN R --quiet -e "devtools::install_github('IRkernel/IRkernel')" && \
     R --quiet -e "IRkernel::installspec(prefix='${VENV_DIR}')"
 
-#RUN R --quiet -e "setwd('${HOME}/work')"
-
-
 CMD jupyter notebook --ip 0.0.0.0
+
 
 USER root
 COPY ./work ${HOME}/work
-#RUN rm -r ${HOME}/kitematic && \
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
-
-#USER root
-#RUN rm -r /home/rstudio/kitematic && \
-#USER ${NB_USER}
