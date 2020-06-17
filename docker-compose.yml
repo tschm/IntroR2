@@ -7,11 +7,10 @@ services:
 
     ports:
       - 127.0.0.1:8888:8888
-      - 127.0.0.1:8787:8787
+      #- 127.0.0.1:8787:8787
 
     volumes:
-      -  /etc/localtime:/etc/localtime:ro
-      - ./work:/home/rstudio/documents
+      - ./work:/home/rstudio/work
 
     environment:
       - DISABLE_AUTH=true
