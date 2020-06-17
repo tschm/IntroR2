@@ -49,6 +49,7 @@ RUN R --quiet -e "devtools::install_github('IRkernel/IRkernel')" && \
 CMD jupyter notebook --ip 0.0.0.0
 
 
+# important for Binder to copy everything
 USER root
 COPY ./work ${HOME}/work
 RUN chown -R ${NB_UID} ${HOME}

@@ -3,7 +3,7 @@ services:
   rstudio:
     build:
       context: .
-      dockerfile: docker/Dockerfile
+      dockerfile: binder/Dockerfile
 
     ports:
       - 127.0.0.1:8888:8888
