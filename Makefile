@@ -1,6 +1,6 @@
 #!make
 SHELL := /bin/bash
-PROJECT_VERSION := 0.0.2
+PROJECT_VERSION := 0.0.3
 
 .PHONY: help build rstudio tag
 
