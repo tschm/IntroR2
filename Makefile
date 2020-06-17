@@ -2,7 +2,7 @@
 SHELL := /bin/bash
 PROJECT_VERSION := 0.0.1
 
-.PHONY: help tag
+.PHONY: help build rstudio tag
 
 .DEFAULT: help
 
@@ -17,7 +17,7 @@ rstudio:
 	echo "http://localhost:8787"
 	docker-compose up rstudio
 
-tag: test
+tag:
 	git tag -a ${PROJECT_VERSION} -m "new tag"
 	git push --tags
 
